@@ -1,0 +1,26 @@
+C:\Users\Matt\Downloads\source-csharpWebCam-master-noexe\csharpWebCam-master\WebCamWrapper\obj\Debug\WebCamWrapper.csprojResolveAssemblyReference.cache
+C:\Users\Matt\Downloads\source-csharpWebCam-master-noexe\csharpWebCam-master\WebCamWrapper\obj\Debug\Camera\Configuration\CameraFrameSourceConfigurationElement.baml
+C:\Users\Matt\Downloads\source-csharpWebCam-master-noexe\csharpWebCam-master\WebCamWrapper\obj\Debug\Camera\Configuration\CameraFrameSourceConfigurationElement.g.cs
+C:\Users\Matt\Downloads\source-csharpWebCam-master-noexe\csharpWebCam-master\WebCamWrapper\obj\Debug\Touchless.Vision_MarkupCompile.cache
+C:\Users\Matt\Downloads\source-csharpWebCam-master-noexe\csharpWebCam-master\WebCamWrapper\obj\Debug\Touchless.Vision.g.resources
+C:\Users\Matt\Downloads\source-csharpWebCam-master-noexe\csharpWebCam-master\WebCamWrapper\bin\Debug\Touchless.Vision.dll
+C:\Users\Matt\Downloads\source-csharpWebCam-master-noexe\csharpWebCam-master\WebCamWrapper\bin\Debug\Touchless.Vision.pdb
+C:\Users\Matt\Downloads\source-csharpWebCam-master-noexe\csharpWebCam-master\WebCamWrapper\bin\Debug\Touchless.Vision.dll.CodeAnalysisLog.xml
+C:\Users\Matt\Downloads\source-csharpWebCam-master-noexe\csharpWebCam-master\WebCamWrapper\bin\Debug\Touchless.Vision.dll.lastcodeanalysissucceeded
+C:\Users\Matt\Downloads\source-csharpWebCam-master-noexe\csharpWebCam-master\WebCamWrapper\bin\Debug\WebCamLib.dll
+C:\Users\Matt\Downloads\source-csharpWebCam-master-noexe\csharpWebCam-master\WebCamWrapper\bin\Debug\WebCamLib.pdb
+C:\Users\Matt\Downloads\source-csharpWebCam-master-noexe\csharpWebCam-master\WebCamWrapper\obj\Debug\Touchless.Vision.dll
+C:\Users\Matt\Downloads\source-csharpWebCam-master-noexe\csharpWebCam-master\WebCamWrapper\obj\Debug\Touchless.Vision.pdb
+C:\Users\Matt\Documents\Visual Studio 2015\Projects\VLC\WebCamWrapper\obj\Debug\WebCamWrapper.csprojResolveAssemblyReference.cache
+C:\Users\Matt\Documents\Visual Studio 2015\Projects\VLC\WebCamWrapper\obj\Debug\Camera\Configuration\CameraFrameSourceConfigurationElement.baml
+C:\Users\Matt\Documents\Visual Studio 2015\Projects\VLC\WebCamWrapper\obj\Debug\Camera\Configuration\CameraFrameSourceConfigurationElement.g.cs
+C:\Users\Matt\Documents\Visual Studio 2015\Projects\VLC\WebCamWrapper\obj\Debug\Touchless.Vision_MarkupCompile.cache
+C:\Users\Matt\Documents\Visual Studio 2015\Projects\VLC\WebCamWrapper\obj\Debug\Touchless.Vision.g.resources
+C:\Users\Matt\Documents\Visual Studio 2015\Projects\VLC\WebCamWrapper\obj\Debug\Touchless.Vision.dll
+C:\Users\Matt\Documents\Visual Studio 2015\Projects\VLC\WebCamWrapper\obj\Debug\Touchless.Vision.pdb
+C:\Users\Matt\Documents\Visual Studio 2015\Projects\VLC\WebCamWrapper\bin\Debug\Touchless.Vision.dll
+C:\Users\Matt\Documents\Visual Studio 2015\Projects\VLC\WebCamWrapper\bin\Debug\Touchless.Vision.pdb
+C:\Users\Matt\Documents\Visual Studio 2015\Projects\VLC\WebCamWrapper\bin\Debug\Touchless.Vision.dll.CodeAnalysisLog.xml
+C:\Users\Matt\Documents\Visual Studio 2015\Projects\VLC\WebCamWrapper\bin\Debug\Touchless.Vision.dll.lastcodeanalysissucceeded
+C:\Users\Matt\Documents\Visual Studio 2015\Projects\VLC\WebCamWrapper\bin\Debug\WebCamLib.dll
+C:\Users\Matt\Documents\Visual Studio 2015\Projects\VLC\WebCamWrapper\bin\Debug\WebCamLib.pdb
