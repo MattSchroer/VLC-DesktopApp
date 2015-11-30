@@ -102,13 +102,23 @@
         </Grid>
         <Grid Name="ReceiveGrid" Visibility="Collapsed">
             <Grid.RowDefinitions>
-                <RowDefinition Height="550"/>
+                <RowDefinition Height="500"/>
+                <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <Grid Grid.Row="0">
-                <Image Margin="0,10,0,0" Name="ReceiveImage" Visibility="Hidden"/>
+                <Image Margin="0,10,0,0" Name="ReceiveImage" Visibility="Collapsed"/>
+                <FlowDocumentReader Name="DocViewer" Visibility="Collapsed"/>
             </Grid>
-            <Grid Grid.Row="1" Background="CornflowerBlue">
+            <Grid Grid.Row="1" Background="DarkSalmon">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <RadioButton IsChecked="True" Grid.Row="0" HorizontalAlignment="Center" Margin="0,0,0,10" VerticalAlignment="Bottom" Name="TextButton" Click="TextButton_OnClick"  GroupName="FileType">Text File</RadioButton>
+                <RadioButton Grid.Row="1" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Name="ImageButton" Click="ImageButton_OnClick"  GroupName="FileType">JPEG</RadioButton>
+            </Grid>
+            <Grid Grid.Row="2" Background="CornflowerBlue">
                 <Button Width="100" Height="30" Margin="0,20,0,0" Name="StartRecieveBtn" Click="StartRecieveBtn_Click" VerticalAlignment="Top">Begin Receiving</Button>
                 <Button Name="ReceiveBackToHome" Margin="0,50,0,0" VerticalAlignment="Center" Width="100" Height="30" Click="ReceiveBackToHome_Click">Back to Home</Button>
             </Grid>

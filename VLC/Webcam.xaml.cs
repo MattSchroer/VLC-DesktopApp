@@ -121,7 +121,7 @@ namespace VLC
         {
             string ts = DateTime.Now.ToString();
             ts = ts.Replace("/", "-");
-            ts = ts.Replace(":", ".");
+            ts = ts.Replace(":", "-");
             return ts;
         }
 

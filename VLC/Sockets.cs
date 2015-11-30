@@ -18,7 +18,7 @@ namespace VLC
                 using (var stream = client.GetStream())
                 {
                     byte[] dataToSend = File.ReadAllBytes(filePath);
-                    byte[] dataSize = BitConverter.GetBytes(dataToSend.Length).Reverse().ToArray();
+                    byte[] dataSize = BitConverter.GetBytes(Convert.ToUInt32(dataToSend.Length));
 
                     stream.Write(dataSize, 0, 4);
                     var ACK = stream.ReadByte();
@@ -34,9 +34,9 @@ namespace VLC
             }
         }
 
-        public static string ReceiveData(string address, int port, string destinationPath, string timestamp)
+        public static string ReceiveData(string address, int port, string destinationPath, string timestamp, string extension)
         {
-            var filePath = Path.Combine(destinationPath, "Result " + timestamp);
+            var filePath = Path.Combine(destinationPath, "Result " + timestamp + extension);
 
             // Create a TcpClient.
             // Note, for this client to work you need to have a TcpServer 
@@ -53,13 +53,15 @@ namespace VLC
                     using (Stream fs = new FileStream(filePath, FileMode.Create, FileAccess.ReadWrite))
                     {
                         // Buffer for reading data
-                        Byte[] bytes = new Byte[1024];
+                        Byte[] bytes = new Byte[1032];
                         int length;
 
                         while (true)
                         {
                             length = stream.Read(bytes, 0, bytes.Length);
-                            if (length == 4 && BitConverter.ToString(bytes, 0, 4) == "DONE")
+                            Console.Write("Length:" + length);
+
+                            if ((length == 4 && System.Text.Encoding.UTF8.GetString(bytes, 0, 4) == "DONE") ||length == 0)
                             {
                                 break;
                             }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows;
 using System.IO;
+using System.Windows.Documents;
 using System.Windows.Media;
 
 namespace VLC
@@ -10,6 +11,13 @@ namespace VLC
     /// </summary>
     public partial class MainWindow : Window
     {
+        public enum FileType
+        {
+            Jpeg, Text
+        }
+
+        public FileType ReceiveType = FileType.Text;
+ 
         public string FileName = string.Empty;
 
         public string ServerIP = string.Empty;
@@ -24,7 +32,7 @@ namespace VLC
 
             // Add any initialization after the InitializeComponent() call.
 
-            IpBox.Text = "127.0.0.1";
+            IpBox.Text = "192.168.7.2";
             PortBox.Text = "9000";
 
             // Create directory for saving image files
@@ -173,11 +181,35 @@ namespace VLC
 
         private void StartRecieveBtn_Click(object sender, RoutedEventArgs e)
         {
-            FileName = Sockets.ReceiveData(ServerIP, ServerPort, DestinationPath, WebcamCtrl.TimeStamp());
+            string extension;
+            switch (ReceiveType)
+            {
+                case FileType.Text:
+                    extension = ".txt";
+                    break;
+                case FileType.Jpeg:
+                    extension = ".jpg";
+                    break;
+                default:
+                    extension = ".jpg";
+                    break;
+            }
+
+            FileName = Sockets.ReceiveData(ServerIP, ServerPort, DestinationPath, WebcamCtrl.TimeStamp(), extension);
             if (!string.IsNullOrEmpty(FileName))
             {
-                ReceiveImage.Source = new ImageSourceConverter().ConvertFromString(FileName) as ImageSource;
-                ReceiveImage.Visibility = Visibility.Visible;
+                if (ReceiveType == FileType.Jpeg)
+                {
+                    ReceiveImage.Source = new ImageSourceConverter().ConvertFromString(FileName) as ImageSource;
+                    ReceiveImage.Visibility = Visibility.Visible;
+                }
+                else if (ReceiveType == FileType.Text)
+                {
+                    DocViewer.Visibility = Visibility.Visible;
+                    var paragraph = new Paragraph();
+                    paragraph.Inlines.Add(File.ReadAllText(FileName));
+                    DocViewer.Document = new FlowDocument(paragraph);
+                }
             }
         }
 
@@ -197,6 +229,16 @@ namespace VLC
             TransmitImage.Visibility = Visibility.Hidden;
             TransmitImage.Source = null;
             StartGrid.Visibility = Visibility.Visible;
+        }
+
+        private void TextButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            ReceiveType = FileType.Text;
+        }
+
+        private void ImageButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            ReceiveType = FileType.Jpeg;
         }
     }
 }
