@@ -1,0 +1,6 @@
+/VLC/bin
+obj
+/VLC/publish
+/VLC/*.user
+/*.sdf
+/*.suo
